@@ -1,0 +1,17 @@
+CREATE TABLE Students (
+    StudentID int PRIMARY KEY,
+    StudentName varchar(50),
+    Course varchar(50)
+);
+INSERT INTO Students (StudentID, StudentName, Course)
+VALUES
+(1,'Deepika','Accounts'),
+(2,'jeni','Math'),
+(3,'Ash','cs'),
+(4,'Geetha','English'),
+(5,'Anu','Chemistry'),
+(6,'Thamarai','Physics');
+
+SELECT Course, COUNT(*) AS StudentCount
+FROM Students
+GROUP BY Course;
